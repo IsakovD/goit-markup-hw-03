@@ -10,6 +10,10 @@
 	--box-line-color: #eeeeee;
 	--horizontal-line-color: #ececec;
 	--alfa-white-color: #ffffff99;
+	--card-set-gap: 30px;
+	--portfolio-shadow-box: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+	--studio-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .body {
@@ -42,6 +46,10 @@ h6 {
 	margin-top: 0;
 }
 
+img {
+	display: block;
+}
+
 .list {
 	padding: 0;
 	margin: 0;
@@ -64,7 +72,6 @@ h6 {
 .button-item:not(:last-child) {
 	margin-right: 8px;
 }
-
 
 .section {
 	padding: 94px 0;
@@ -146,13 +153,14 @@ h6 {
 
 /* кнопка */
 .button {
+	padding: 6px 25px 6px 25px;
 	margin: 0 auto;
 	font-family: roboto;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.62;
 	letter-spacing: 0.03em;
-	display: flex;
+	display: block;
 	align-items: center;
 	text-align: center;
 	cursor: pointer;
@@ -164,6 +172,8 @@ h6 {
 }
 
 .hero-button {
+	display: block;
+	padding: 10px 32px 10px 32px;
 	color: var(--white-color);
 	background-color: var(--accent-color);
 	font-weight: 700;
@@ -218,6 +228,10 @@ h6 {
 /* .flex-ability.center {
 	align-items: center;
 } */
+
+.wrap-element * {
+	outline: 1px solid tomato;
+}
 
 .auth-list {
 	display: flex;
@@ -315,42 +329,45 @@ h6 {
 } */
 
 .background-team-list .flex-ability > .item-img {
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: var(--studio-box-shadow);
 	border-radius: 0px 0px 4px 4px;
 }
 
-
-
-.wrap-list {
+/* portfolio */
+.portfolio-list {
+	padding: 0;
+	margin: 0;
+	margin-top: 50px;
+	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	justify-items: center;
 }
 
-.wrap-element {
-	width: calc((100%-30px) / 3);
-	
-	
-	
+.portfolio-list > .portfolio-item {
+	flex-basis: calc(100% / 3 - var(--card-set-gap));
+	box-shadow: var(--portfolio-shadow-box);
+}
+.portfolio-item:not(:nth-child(3n)) {
+	margin-right: var(--card-set-gap);
+}
+.portfolio-item:not(:nth-last-child(-n + 3)) {
+	margin-bottom: var(--card-set-gap);
 }
 
-.wrap-element:not(:nth-last-child(-n + 3)) {
-	margin-bottom: 30px;
-}
-.wrap-element:not(:nth-first-child(3n)) {
-	margin-right: 30px;
-}
-.wrap-element a {
-	align-items: center;
+.portfolio-item .portfolio-content,
+.porfolio-text {
+	padding-left: 24px;
+	text-align: left;
 }
 
-/* .wrap {
-	
-	margin: 0;
+.porfolio-text {
+	padding-bottom: 20px;
 }
 
- */
-
+.portfolio-content {
+	padding-top: 20px;
+	margin-bottom: 4px;
+}
 
 /* підвал */
 
@@ -371,30 +388,3 @@ h6 {
 .footer-contacts {
 	color: var(--alfa-white-color);
 }
-
-.wrap {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	margin-bottom: 4px;
-	text-indent: 1.5em
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
