@@ -32,11 +32,54 @@ address {
 	font-style: normal;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 15px;
+	width: 1200px;
+
+	/* outline: 2px solid tomato; */
+}
+
+.section {
+	padding: 94px 0;
+}
+
+.section.no-padding-bottom {
+	padding-bottom: 0px;
+}
+
 /* лише для реалізації стилів у футері та герої, бо буде з білим фоном зливатися */
 .background-footer,
 .background-hero {
 	background-color: var(--footer-bg-color);
 }
+
+.background-hero {
+	padding: 200px 0;
+}
+
+.background-footer {
+	padding: 60px 0;
+}
+
+
 
 .background-team-list {
 	background-color: var(--team-bg-and-button-color);
@@ -44,6 +87,9 @@ address {
 
 /* логотип */
 .logo {
+	margin-right: 93px;
+	padding: 25px 0;
+
 	font-family: raleway;
 	font-weight: 700;
 	font-size: 26px;
@@ -57,9 +103,14 @@ address {
 }
 .inner-color {
 	color: var(--white-color);
+	margin: 0;
+	padding: 0;
+	
 }
 
 .link {
+	display: block;
+	padding: 32px 0;
 	color: var(--main-color);
 	text-decoration: none;
 }
@@ -89,6 +140,7 @@ address {
 
 /* кнопка */
 .button {
+	margin: 0 auto;
 	font-family: roboto;
 	color: var(--main-color);
 	background-color: var(team-bg-and-button-color);
@@ -122,17 +174,75 @@ address {
 
 /* шапка сайту */
 .header {
+	height: 80px;
+	border-bottom: 1px solid var(--horizontal-line-color);
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+
+	/* background-color: chocolate; */
 }
 
 .header-text {
 	color: var(--secondary-color);
 }
 
+/* nav */
+/* .flex-container {
+	display: flex;
+	align-items: center;
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
+}
+
+.main-nav > ul {
+	display: flex;
+} */
+
+.flex-ability {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+/* .flex-ability.center {
+	align-items: center;
+} */
+
+.auth-list {
+	display: flex;
+	margin-left: auto;
+}
+
+.flex-ability .item:not(:last-child) {
+	margin-right: 50px;
+}
+
+.flex-ability .item-img:not(:last-child) {
+	margin-right: 30px;
+}
+
 /* унікальний контент */
+
+/* .background-hero {
+	background-color: teal;
+}
+.bgc-one {
+	background-color: chocolate;
+}
+
+.bgc-two {
+	background-color: lightgreen;
+} */
 .hero {
+	width: 686px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
@@ -143,6 +253,8 @@ address {
 }
 
 .section-title {
+	text-align: center;
+	margin-bottom: 50px;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2;
@@ -151,6 +263,7 @@ address {
 }
 
 .section-sub-title {
+	margin-bottom: 10px;
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
@@ -159,10 +272,10 @@ address {
 .large-section-title {
 	font-size: 36px;
 	line-height: 1.67;
-	text-align: center;
 }
 
 .section-text {
+	margin: 0;
 	font-size: 16px;
 	line-height: 1.88;
 	letter-spacing: 0.03em;
@@ -170,22 +283,56 @@ address {
 }
 
 .section-text-lower {
+	width: 270px;
+	margin: 0;
 	line-height: 1.71;
 	color: var(--secondary-color);
 }
 
 .name-list {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	text-align: center;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
 }
 
+.item-img > .section-text {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/* .item-img > img {
+	margin-bottom: 30px;
+} */
+
+.background-team-list .flex-ability > .item-img {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+}
+
 /* підвал */
+
+
 .footer-text {
+	padding: 0;
 	line-height: 1.71;
 	color: var(--white-color);
+
+}
+
+
+.footer-item:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.footer-item:first-child {
+	margin-top: 20px;
 }
 
 .footer-contacts {
 	color: var(--alfa-white-color);
+
 }
+
