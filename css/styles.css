@@ -19,10 +19,9 @@
 	--horizontal-line-color: #ececec;
 	--alfa-white-color: #ffffff99;
 
-/* bg colors */
---main-bg-color:  #fff;
+	/* bg colors */
+	--main-bg-color: #fff;
 	--footer-bg-color: #2f303a;
-
 
 	/* others */
 	--portfolio-shadow-box: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -50,7 +49,7 @@ p {
 
 img {
 	display: block;
-	max-width: 100%;
+
 	height: auto;
 }
 
@@ -252,6 +251,9 @@ button {
 .list-item {
 	margin-right: 30px;
 }
+.list-item:last-child {
+	margin-right: 0;
+}
 
 .item-img.bgc-white {
 	background-color: var(--white-color);
@@ -339,7 +341,6 @@ button {
 .portfolio-list {
 	padding: 0;
 	margin: 0;
-	margin-top: 50px;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
@@ -356,17 +357,35 @@ button {
 }
 
 .porfolio-discr {
-	display: block;
-	text-align: left;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding-left: 24px;
+	padding-right: 24px;
 	border: 1px solid var(--box-line-color);
+	border-top: none;
 }
 
-.porfolio-discr > .section-title {
+
+.portfolio-title {
 	margin-bottom: 4px;
-	text-align: left;
+
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+
+	color: var(--main-color);
+}
+
+.porfolio-text {
+	font-size: 16px;
+	line-height: 1.88;
+
+	color: var(--secondary-color);
+}
+
+.portfolio-container {
+	margin-bottom: 50px;
 }
 
 /* підвал */
